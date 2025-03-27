@@ -12,21 +12,28 @@
 
 #include "../include/minishell.h"
 
-void    prompt()
+void	clear_screen(void)
 {
-    char    path[1023];
-    char    *user;
-
-    getcwd(path, sizeof(path));
-    user = getenv("USER");
-    system("clear");
-	ft_printf("%s%s@:%s %s\n%s>₺ %s", GREEN, user, ORANGE, path, BLUE, DEFAULT);
-    while (1)
-        ;
+	write(STDOUT_FILENO, "\033[H\033[J", 7);
 }
 
-int main(void)
+void	prompt(void)
 {
-    prompt();
-    return (1);
+	char	path[1023];
+	char	*user;
+
+	if (getcwd(path, sizeof(path)) == NULL)
+		return ;//quit();
+	user = getenv("USER");
+	ft_printf("%s%s@:%s %s\n%s>\u20BA %s"\
+	, GREEN, user, ORANGE, path, BLUE, DEFAULT);
+	while (1)
+		;
+}
+
+int	main(void)
+{
+	clear_screen();
+	prompt();
+	return (1);
 }

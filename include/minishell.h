@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: beldemir <beldemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 23:11:47 by beldemir          #+#    #+#             */
-/*   Updated: 2025/03/26 23:11:48 by beldemir         ###   ########.fr       */
+/*   Updated: 2025/03/27 10:37:29 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-
-
 # define GREEN "\033[38;2;175;252;65m"
 # define BLUE "\033[38;2;8;99;117m"
 # define ORANGE "\033[38;2;255;202;58m"
@@ -25,6 +23,5 @@
 
 //------------- UTILS -------------//
 int	ft_printf(const char *str, ...);
-
 
 #endif
