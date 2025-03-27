@@ -10,3 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef MINISHELL_H
+# define MINISHELL_H
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdlib.h>
+
+
+
+# define GREEN "\033[38;2;175;252;65m"
+# define BLUE "\033[38;2;8;99;117m"
+# define ORANGE "\033[38;2;255;202;58m"
+# define DEFAULT "\033[0m"
+
+//------------- UTILS -------------//
+int	ft_printf(const char *str, ...);
+
+
+#endif
