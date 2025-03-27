@@ -1,13 +1,18 @@
 NAME = minishell
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ./external/ft_printf/ft_printf.c ./src/main.c
+RLFLAGS = -lreadline
+SRCS =	./external/ft_printf/ft_printf.c \
+		./external/libft_utils/ft_strlen.c \
+		./external/libft_utils/ft_split_args.c \
+		./src/main.c \
+
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) $(RLFLAGS)
 	rm -f $(OBJS)
 
 clean:
