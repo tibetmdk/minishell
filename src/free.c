@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 23:09:52 by tmidik            #+#    #+#             */
-/*   Updated: 2025/03/28 00:07:10 by tmidik           ###   ########.fr       */
+/*   Created: 2025/03/27 23:45:28 by tmidik            #+#    #+#             */
+/*   Updated: 2025/03/28 00:17:52 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/minishell.h"
 
-void	clear_screen(t_data *data)
+int	free_array(char	**str)
 {
-	write(STDOUT_FILENO, "\033[H\033[J", 7);
-	prompt(data);
-}
+	int	i;
 
-int	main(void)
-{
-	t_data	*data;
-
-	data = (t_data *)malloc(sizeof(t_data));
-	clear_screen(data);
-	return (1);
+	if (!str)
+		return (-1);
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
+	return (0);
 }

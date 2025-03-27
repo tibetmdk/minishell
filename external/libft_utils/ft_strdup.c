@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 23:09:52 by tmidik            #+#    #+#             */
-/*   Updated: 2025/03/28 00:07:10 by tmidik           ###   ########.fr       */
+/*   Created: 2025/03/27 23:34:32 by tmidik            #+#    #+#             */
+/*   Updated: 2025/03/27 23:59:58 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/minishell.h"
+#include "../../include/minishell.h"
 
-void	clear_screen(t_data *data)
+char	*ft_strdup(char *s1)
 {
-	write(STDOUT_FILENO, "\033[H\033[J", 7);
-	prompt(data);
-}
+	char	*buffer;
+	int		i;
 
-int	main(void)
-{
-	t_data	*data;
-
-	data = (t_data *)malloc(sizeof(t_data));
-	clear_screen(data);
-	return (1);
+	i = 0;
+	buffer = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+	if (!buffer)
+		return (NULL);
+	while (s1[i] != '\0')
+	{
+		buffer[i] = s1[i];
+		i++;
+	}
+	buffer[i] = '\0';
+	return (buffer);
 }

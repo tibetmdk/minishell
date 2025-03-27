@@ -5,7 +5,13 @@ RLFLAGS = -lreadline
 SRCS =	./external/ft_printf/ft_printf.c \
 		./external/libft_utils/ft_strlen.c \
 		./external/libft_utils/ft_split_args.c \
+		./external/libft_utils/ft_split.c \
+		./external/libft_utils/ft_strdup.c \
+		./external/libft_utils/ft_substr.c \
 		./src/main.c \
+		./src/execute.c \
+		./src/read_prompt.c \
+		./src/free.c \
 
 OBJS = $(SRCS:.c=.o)
 
