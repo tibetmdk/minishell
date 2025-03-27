@@ -6,13 +6,12 @@
 /*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 23:09:52 by tmidik            #+#    #+#             */
-/*   Updated: 2025/03/27 14:42:14 by tmidik           ###   ########.fr       */
+/*   Updated: 2025/03/27 14:55:20 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/minishell.h"
 #include <sys/wait.h>
-
 
 void	clear_screen(void)
 {

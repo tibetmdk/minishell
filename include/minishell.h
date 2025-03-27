@@ -6,7 +6,7 @@
 /*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 23:11:47 by beldemir          #+#    #+#             */
-/*   Updated: 2025/03/27 14:41:17 by tmidik           ###   ########.fr       */
+/*   Updated: 2025/03/27 14:55:05 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
-#include <readline/readline.h>
-#include <readline/history.h>
+# include <readline/readline.h>
+# include <readline/history.h>
 
 # define GREEN "\033[38;2;175;252;65m"
 # define BLUE "\033[38;2;8;99;117m"
@@ -38,6 +38,6 @@ void	count_words(t_data *data);
 char	**ft_split_args(t_data *data);
 
 void	prompt(t_data *data);
-void    execute_command(char **args);
+void	execute_command(char **args);
 
 #endif
