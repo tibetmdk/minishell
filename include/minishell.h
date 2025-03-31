@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 23:11:47 by beldemir          #+#    #+#             */
-/*   Updated: 2025/03/31 18:22:18 by beldemir         ###   ########.fr       */
+/*   Updated: 2025/03/31 18:54:40 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ typedef struct s_data
 //------------- UTILS -------------//
 int		ft_printf(const char *str, ...);
 int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
 void	count_words(t_data *data);
 char	**ft_split_args(t_data *data);
 char	**ft_split(char *s, char c);
@@ -43,9 +44,10 @@ char	*ft_strdup(char *s1);
 char	*ft_substr(char *s, unsigned int start, size_t len);
 
 void	prompt(t_data *data);
-void	execute_command(char **args);
+void	execute_command(t_data *data);
 char	*get_command_path(char *command);
 void	clear_screen(t_data *data);
+int		is_built_in(t_data *data);
 
 //------------- FREE --------------//
 int		free_array(char	**str);

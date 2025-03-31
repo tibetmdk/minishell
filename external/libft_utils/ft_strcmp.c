@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   quit.c                                             :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/31 17:39:37 by beldemir          #+#    #+#             */
-/*   Updated: 2025/03/31 18:58:02 by tmidik           ###   ########.fr       */
+/*   Created: 2025/03/31 18:28:11 by tmidik            #+#    #+#             */
+/*   Updated: 2025/03/31 18:57:25 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/minishell.h"
+#include "../../include/minishell.h"
 
-void	quit_shell(t_data *data)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
 
-	if (data->input)
-		free(data->input);
-	if (data->user)
-		free(data->user);
 	i = 0;
-	while (i < data->arg_count)
-	{
-		free(data->args[i]);
+	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
 		i++;
-	}
-	if (data->args)
-		free(data->args);
+	return (s1[i] - s2[i]);
 }

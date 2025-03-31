@@ -6,7 +6,7 @@
 /*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 23:25:45 by tmidik            #+#    #+#             */
-/*   Updated: 2025/03/28 00:17:32 by tmidik           ###   ########.fr       */
+/*   Updated: 2025/03/31 18:55:00 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	prompt(t_data *data)
 		add_history(data->input);
 		ft_split_args(data);
 		if (data->args && data->args[0])
-			execute_command(data->args);
+			execute_command(data);
 	}
 }
 
