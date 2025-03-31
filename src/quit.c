@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   quit.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 23:09:52 by tmidik            #+#    #+#             */
-/*   Updated: 2025/03/31 18:22:06 by beldemir         ###   ########.fr       */
+/*   Created: 2025/03/31 17:39:37 by beldemir          #+#    #+#             */
+/*   Updated: 2025/03/31 18:21:55 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/minishell.h"
 
-void	clear_screen(t_data *data)
+void	quit_shell(t_data *data)
 {
-	write(STDOUT_FILENO, "\033[H\033[J", 7);
-	prompt(data);
+	int i;
+
+	if (data->input)
+		free(data->input);
+	if (data->user)
+		free(data->user);
+	i = 0;
+	while (i < data->arg_count)
+	{
+		free(data->args[i]);
+		i++;
+	}
+	if (data->args)
+		free(data->args);
 }
 
-int	main(void)
-{
-	t_data	*data;
-
-	data = (t_data *)malloc(sizeof(t_data));
-	clear_screen(data);
-	quit_shell(data);
-}

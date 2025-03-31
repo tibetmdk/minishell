@@ -12,6 +12,7 @@ SRCS =	./external/ft_printf/ft_printf.c \
 		./src/execute.c \
 		./src/read_prompt.c \
 		./src/free.c \
+		./src/quit.c \
 
 OBJS = $(SRCS:.c=.o)
 
