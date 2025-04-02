@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
+/*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 23:26:54 by tmidik            #+#    #+#             */
-/*   Updated: 2025/03/31 18:57:48 by tmidik           ###   ########.fr       */
+/*   Updated: 2025/04/01 12:33:20 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 int	is_built_in(t_data *data)
 {
 	(void)data;
-	/*if (ft_strcmp(data->args[0], "echo") == 0)
+	if (ft_strcmp(data->args[0], "echo") == 0)
 		exec_echo(data);
+	/*
 	else if (ft_strcmp(data->args[0], "cd") == 0)
 		exec_cd(data);
 	else if (ft_strcmp(data->args[0], "pwd") == 0)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
+/*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 23:11:47 by beldemir          #+#    #+#             */
-/*   Updated: 2025/03/31 18:54:40 by tmidik           ###   ########.fr       */
+/*   Updated: 2025/04/01 12:32:58 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,9 @@ void	execute_command(t_data *data);
 char	*get_command_path(char *command);
 void	clear_screen(t_data *data);
 int		is_built_in(t_data *data);
+
+//------------ BUILT IN -----------//
+int     exec_echo(t_data *data);
 
 //------------- FREE --------------//
 int		free_array(char	**str);
