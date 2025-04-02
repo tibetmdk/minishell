@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 23:09:52 by tmidik            #+#    #+#             */
-/*   Updated: 2025/03/31 18:22:06 by beldemir         ###   ########.fr       */
+/*   Updated: 2025/04/02 11:09:05 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	main(void)
 	t_data	*data;
 
 	data = (t_data *)malloc(sizeof(t_data));
+	if (!data)
+		return (perror("Malloc failed."), 1);
 	clear_screen(data);
 	quit_shell(data);
 }

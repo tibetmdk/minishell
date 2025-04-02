@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 23:26:54 by tmidik            #+#    #+#             */
-/*   Updated: 2025/04/01 12:33:20 by beldemir         ###   ########.fr       */
+/*   Updated: 2025/04/02 11:07:13 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,20 @@ int	is_built_in(t_data *data)
 {
 	(void)data;
 	if (ft_strcmp(data->args[0], "echo") == 0)
-		exec_echo(data);
+		return (exec_echo(data));
 	/*
 	else if (ft_strcmp(data->args[0], "cd") == 0)
-		exec_cd(data);
+		return (exec_cd(data));
 	else if (ft_strcmp(data->args[0], "pwd") == 0)
-		exec_pwd(data);
+		return (exec_pwd(data));
 	else if (ft_strcmp(data->args[0], "export") == 0)
-		exec_export(data);
+		return (exec_export(data));
 	else if (ft_strcmp(data->args[0], "unset") == 0)
-		exec_unset(data);
+		return (exec_unset(data));
 	else if (ft_strcmp(data->args[0], "env") == 0)
-		exec_env(data);
+		return ((exec_env(data));
 	else if (ft_strcmp(data->args[0], "exit") == 0)
-		exec_exit(data);
+		return (exec_exit(data));
 	else
 		return (-1);*/
 	return (1);
