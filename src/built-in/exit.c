@@ -1,0 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   exit.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/02 20:14:17 by tmidik            #+#    #+#             */
+/*   Updated: 2025/04/02 21:03:36 by tmidik           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../../include/minishell.h"
+
+void	exec_exit(t_data *data)
+{
+	long	exit_code;
+	char	*arg;
+	int		i;
+
+	i = 0;
+	exit_code = 0;
+	if (data->args[1])
+	{
+		arg = data->args[1];
+		while (arg[i])
+		{
+			if ((arg[i] < '0' || arg[i] > '9') && !(i == 0 && (arg[i] == '+' \
+				|| arg[i] == '-')))
+				(write(2, "minishell: exit: numeric argument required\n", \
+				43), exit(255));
+			i++;
+		}
+		exit_code = ft_atol(arg);
+		if (data->args[2])
+		{
+			write(2, "exit:too many arguments\n", 36);
+			return ;
+		}
+	}
+	exit(exit_code % 256);
+}
