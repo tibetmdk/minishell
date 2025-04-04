@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
+/*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 23:26:54 by tmidik            #+#    #+#             */
-/*   Updated: 2025/04/02 11:07:13 by beldemir         ###   ########.fr       */
+/*   Updated: 2025/04/04 16:31:17 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	is_built_in(t_data *data)
 	(void)data;
 	if (ft_strcmp(data->args[0], "echo") == 0)
 		return (exec_echo(data));
+	else if (ft_strcmp(data->args[0], "exit") == 0)
+		return (exec_exit(data));
 	/*
 	else if (ft_strcmp(data->args[0], "cd") == 0)
 		return (exec_cd(data));
@@ -28,8 +30,6 @@ int	is_built_in(t_data *data)
 		return (exec_unset(data));
 	else if (ft_strcmp(data->args[0], "env") == 0)
 		return ((exec_env(data));
-	else if (ft_strcmp(data->args[0], "exit") == 0)
-		return (exec_exit(data));
 	else
 		return (-1);*/
 	return (1);
