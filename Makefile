@@ -10,6 +10,7 @@ SRCS =	./external/ft_printf/ft_printf.c \
 		./external/libft_utils/ft_substr.c \
 		./external/libft_utils/ft_strcmp.c \
 		./src/built-in/echo.c \
+		./src/built-in/pwd.c \
 		./src/main.c \
 		./src/execute.c \
 		./src/read_prompt.c \

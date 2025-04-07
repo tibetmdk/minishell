@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 23:26:54 by tmidik            #+#    #+#             */
-/*   Updated: 2025/04/02 11:07:13 by beldemir         ###   ########.fr       */
+/*   Updated: 2025/04/02 19:25:46 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ int	is_built_in(t_data *data)
 	(void)data;
 	if (ft_strcmp(data->args[0], "echo") == 0)
 		return (exec_echo(data));
-	/*
 	else if (ft_strcmp(data->args[0], "cd") == 0)
-		return (exec_cd(data));
+		return (1);//exec_cd(data));
 	else if (ft_strcmp(data->args[0], "pwd") == 0)
 		return (exec_pwd(data));
+	/*
 	else if (ft_strcmp(data->args[0], "export") == 0)
 		return (exec_export(data));
 	else if (ft_strcmp(data->args[0], "unset") == 0)

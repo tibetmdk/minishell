@@ -6,7 +6,7 @@
 /*   By: beldemir <beldemir@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 23:11:47 by beldemir          #+#    #+#             */
-/*   Updated: 2025/04/01 12:32:58 by beldemir         ###   ########.fr       */
+/*   Updated: 2025/04/02 19:26:11 by beldemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int		is_built_in(t_data *data);
 
 //------------ BUILT IN -----------//
 int     exec_echo(t_data *data);
+int		exec_pwd(t_data *data);
 
 //------------- FREE --------------//
 int		free_array(char	**str);
