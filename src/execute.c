@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 23:26:54 by tmidik            #+#    #+#             */
-/*   Updated: 2025/04/04 16:31:17 by tmidik           ###   ########.fr       */
+/*   Updated: 2025/04/07 18:24:53 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,11 @@ int	is_built_in(t_data *data)
 		return (exec_export(data));
 	else if (ft_strcmp(data->args[0], "unset") == 0)
 		return (exec_unset(data));
+	*/
 	else if (ft_strcmp(data->args[0], "env") == 0)
-		return ((exec_env(data));
+		return (exec_env(data));
 	else
-		return (-1);*/
+		return (-1);
 	return (1);
 }
 
@@ -40,7 +41,7 @@ void	execute_command(t_data *data)
 	pid_t	pid;
 	char	*cmd_path;
 
-	if (is_built_in(data))
+	if (is_built_in(data) == -200)
 		return ;
 	cmd_path = get_command_path(data->args[0]);
 	if (!cmd_path)

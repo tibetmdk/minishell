@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 20:14:17 by tmidik            #+#    #+#             */
-/*   Updated: 2025/04/04 16:16:11 by tmidik           ###   ########.fr       */
+/*   Updated: 2025/04/07 17:00:37 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	exec_exit(t_data *data)
 		exit_code = ft_atol(arg);
 		if (data->args[2])
 		{
-			write(2, "exit:too many arguments\n", 36);
+			write(2, "exit:too many arguments\n", 25);
 			return (1);
 		}
 	}

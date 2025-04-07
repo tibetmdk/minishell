@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   env.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/26 23:09:52 by tmidik            #+#    #+#             */
-/*   Updated: 2025/04/07 18:26:31 by kali             ###   ########.fr       */
+/*   Created: 2025/04/07 16:41:32 by kali              #+#    #+#             */
+/*   Updated: 2025/04/07 18:46:24 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/minishell.h"
+ #include "../../include/minishell.h"
 
-void	clear_screen(t_data *data)
-{
-	write(STDOUT_FILENO, "\033[H\033[J", 7);
-	prompt(data);
-}
+ int	exec_env(t_data *data)
+ {
+    int i;
 
-int	main(void)
-{
-	t_data	*data;
-
-	data = (t_data *)malloc(sizeof(t_data));
-	if (!data)
-		return (perror("Malloc failed."), 1);
-	clear_screen(data);
-	quit_shell(data);
-}
+    (void)data;
+    i = 0;
+	while (environ[i])
+    {
+        ft_printf("%s\n", environ[i]);
+        i++;
+    }
+    return (0);
+ }

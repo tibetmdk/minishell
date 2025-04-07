@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
+/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 23:11:47 by beldemir          #+#    #+#             */
-/*   Updated: 2025/04/04 16:30:52 by tmidik           ###   ########.fr       */
+/*   Updated: 2025/04/07 18:25:37 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 # define BLUE "\033[38;2;8;99;117m"
 # define ORANGE "\033[38;2;255;202;58m"
 # define DEFAULT "\033[0m"
+
+extern char **environ;
 
 typedef struct s_data
 {
@@ -50,11 +52,12 @@ void	execute_command(t_data *data);
 char	*get_command_path(char *command);
 void	clear_screen(t_data *data);
 int		is_built_in(t_data *data);
-int		exec_exit(t_data *data);
 int		is_built_in(t_data *data);
 
 //------------ BUILT IN -----------//
 int		exec_echo(t_data *data);
+int		exec_exit(t_data *data);
+int		exec_env(t_data *data);
 
 //------------- FREE --------------//
 int		free_array(char	**str);
