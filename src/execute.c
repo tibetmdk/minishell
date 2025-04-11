@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 23:26:54 by tmidik            #+#    #+#             */
-/*   Updated: 2025/04/07 18:24:53 by kali             ###   ########.fr       */
+/*   Updated: 2025/04/11 23:05:00 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	is_built_in(t_data *data)
 		return (exec_echo(data));
 	else if (ft_strcmp(data->args[0], "exit") == 0)
 		return (exec_exit(data));
-	/*
 	else if (ft_strcmp(data->args[0], "cd") == 0)
 		return (exec_cd(data));
+	/*
 	else if (ft_strcmp(data->args[0], "pwd") == 0)
 		return (exec_pwd(data));
 	else if (ft_strcmp(data->args[0], "export") == 0)
@@ -41,7 +41,7 @@ void	execute_command(t_data *data)
 	pid_t	pid;
 	char	*cmd_path;
 
-	if (is_built_in(data) == -200)
+	if (is_built_in(data) == 0)
 		return ;
 	cmd_path = get_command_path(data->args[0]);
 	if (!cmd_path)

@@ -6,7 +6,7 @@
 /*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 23:25:45 by tmidik            #+#    #+#             */
-/*   Updated: 2025/03/31 18:55:00 by tmidik           ###   ########.fr       */
+/*   Updated: 2025/04/11 23:06:19 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void	prompt(t_data *data)
 {
 	char	path[1023];
 
-	if (getcwd(path, sizeof(path)) == NULL)
-		return ;
 	data->user = getenv("USER");
 	while (1)
 	{
+		if (getcwd(path, sizeof(path)) == NULL)
+			return ;
 		ft_printf("%s%s@:%s %s\n%s", GREEN, data->user, ORANGE, path, DEFAULT);
 		data->input = readline("\033[38;2;8;99;117m>₺ \033[0m");
 		if (!data->input)

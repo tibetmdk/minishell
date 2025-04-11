@@ -11,6 +11,7 @@ SRCS =	./external/ft_printf/ft_printf.c \
 		./external/libft_utils/ft_strcmp.c \
 		./src/built-in/echo.c \
 		./src/built-in/exit.c \
+		./src/built-in/cd.c \
 		./src/built-in/env.c \
 		./external/libft_utils/ft_atol.c \
 		./src/main.c \

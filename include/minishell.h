@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kali <kali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tmidik <tibetmdk@gmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 23:11:47 by beldemir          #+#    #+#             */
-/*   Updated: 2025/04/07 18:25:37 by kali             ###   ########.fr       */
+/*   Updated: 2025/04/11 23:05:49 by tmidik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int		is_built_in(t_data *data);
 int		exec_echo(t_data *data);
 int		exec_exit(t_data *data);
 int		exec_env(t_data *data);
+int		exec_cd(t_data *data);
 
 //------------- FREE --------------//
 int		free_array(char	**str);
